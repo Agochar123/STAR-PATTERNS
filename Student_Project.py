@@ -6,19 +6,18 @@ def draw_star(c,s,size,x,y):
         turtle.penup()
         turtle.goto(x,y)
         turtle.pendown()
-        turtle.fillcolor(#Make the speed change by using speed elements)
+        turtle.fillcolor(i)
         turtle.begin_fill()
-        #Pop the last color
-        #Append the color cyan into the colors list
+        c.pop()
+        c.append("cyan")
         for i in range(5):
-            turtle.fd(#Make the turtle move in the forward direction by size variable)
+            turtle.fd(size)
             turtle.right(144)
-            turtle.speed(#Make the speed change by using speed elements)
+            turtle.speed(s[i])
         turtle.end_fill()
         turtle.ht()
-#Call the function 5 times by using parameters
-#Pass the parameters as ==> colors,speed,10,0,20
-#Pass the parameters as ==> colors,speed,30,15,30
-#Pass the parameters as ==> colors,speed,40,50,40
-#Pass the parameters as ==> colors,speed,50,100,50
-#Pass the parameters as ==> colors,speed,70,160,70
+draw_star(colors,speed,10,0,20)
+draw_star(colors,speed,30,15,30)
+draw_star(colors,speed,40,50,40)
+draw_star(colors,speed,50,100,50)
+draw_star(colors,speed,70,160,70)
